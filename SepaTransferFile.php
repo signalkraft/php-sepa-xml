@@ -146,8 +146,8 @@ class SepaTransferFile extends SepaFileBlock
 	{
 		$this->payment->addCreditTransfer($transferInfo);
 
-		$this->numberOfTransactions += $this->payment->getNumberOfTransactions();
-		$this->controlSumCents += $this->payment->getControlSumCents();
+		$this->numberOfTransactions = $this->payment->getNumberOfTransactions();
+		$this->controlSumCents = $this->payment->getControlSumCents();
 	}
 
 	/**
