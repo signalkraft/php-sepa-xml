@@ -163,7 +163,7 @@ class SepaTransferFile extends SepaFileBlock
 
 		$GrpHdr->addChild('NbOfTxs', $this->numberOfTransactions);
 		$GrpHdr->addChild('CtrlSum', $this->intToCurrency($this->controlSumCents));
-		$GrpHdr->addChild('InitgPty')->addChild('Nm', $this->initiatingPartyName);
+		$GrpHdr->addChild('InitgPty')->addChild('Nm')->addCData($this->initiatingPartyName);
 		if (isset($this->initiatingPartyId))
 			$GrpHdr->addChild('InitgPty')->addChild('Id', $this->initiatingPartyId);
 
