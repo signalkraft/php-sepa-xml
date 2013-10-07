@@ -232,7 +232,7 @@ class SepaPaymentInfo extends SepaFileBlock
 			$PmtInf->PmtTpInf->addChild('LclInstrm')->addChild('Cd', $this->localInstrumentCode);
 		
 		$PmtInf->addChild('ReqdExctnDt', $requestedExecutionDate);
-		$PmtInf->addChild('Dbtr')->addChild('Nm', htmlentities($this->debtorName));
+		$PmtInf->addChild('Dbtr')->addChild('Nm', '<![CDATA[' . $this->debtorName  .']]>');
 
 		$DbtrAcct = $PmtInf->addChild('DbtrAcct');
 		$DbtrAcct->addChild('Id')->addChild('IBAN', $this->debtorAccountIBAN);
