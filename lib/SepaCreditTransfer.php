@@ -94,10 +94,10 @@ class SepaCreditTransfer extends SepaFileBlock
 	/**
 	 * DO NOT CALL THIS FUNCTION DIRECTLY!
 	 * 
-	 * @param SimpleXMLElement $xml
-	 * @return SimpleXMLElement
+	 * @param SimpleXMLExtended $xml
+	 * @return SimpleXMLExtended
 	 */
-	public function generateXml(SimpleXMLElement $xml)
+	public function generateXml(SimpleXMLExtended $xml)
 	{
 		// -- Credit Transfer Transaction Information --\\
 		
@@ -111,7 +111,7 @@ class SepaCreditTransfer extends SepaFileBlock
 		if ($this->creditorBIC) {
 			$CdtTrfTxInf->addChild('CdtrAgt')->addChild('FinInstnId')->addChild('BIC', $this->creditorBIC);
 		}
-		$CdtTrfTxInf->addChild('Cdtr')->addChild('Nm', htmlentities($this->creditorName));
+		$CdtTrfTxInf->addChild('Cdtr')->addChild('Nm')->addCData($this->creditorName);
 		$CdtTrfTxInf->addChild('CdtrAcct')->addChild('Id')->addChild('IBAN', $this->creditorAccountIBAN);
 		$CdtTrfTxInf->addChild('RmtInf')->addChild('Ustrd', $this->remittanceInformation);
 		
