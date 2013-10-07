@@ -208,10 +208,10 @@ class SepaPaymentInfo extends SepaFileBlock
 	 *
 	 * Generate the XML structure for this "Payment Info" block.
 	 * 
-	 * @param SimpleXMLElement $xml
-	 * @return SimpleXMLElement
+	 * @param SimpleXMLExtended $xml
+	 * @return SimpleXMLExtended
 	 */
-	public function generateXml(SimpleXMLElement $xml)
+	public function generateXml(SimpleXMLExtended $xml)
 	{
 		$datetime = new DateTime();
 
@@ -220,7 +220,7 @@ class SepaPaymentInfo extends SepaFileBlock
 		// -- Payment Information --\\
 
 		$PmtInf = $xml->CstmrCdtTrfInitn->addChild('PmtInf');
-		$PmtInf->addChild('PmtInfId', htmlentities($this->id));
+		$PmtInf->addChild('PmtInfId')->addCData($this->id);
 		if (isset($this->categoryPurposeCode))
 			$PmtInf->addChild('CtgyPurp')->addChild('Cd', $this->categoryPurposeCode);
 
@@ -232,7 +232,7 @@ class SepaPaymentInfo extends SepaFileBlock
 			$PmtInf->PmtTpInf->addChild('LclInstrm')->addChild('Cd', $this->localInstrumentCode);
 		
 		$PmtInf->addChild('ReqdExctnDt', $requestedExecutionDate);
-		$PmtInf->addChild('Dbtr')->addChild('Nm', '<![CDATA[' . $this->debtorName  .']]>');
+		$PmtInf->addChild('Dbtr')->addChild('Nm')->addCData($this->debtorName);
 
 		$DbtrAcct = $PmtInf->addChild('DbtrAcct');
 		$DbtrAcct->addChild('Id')->addChild('IBAN', $this->debtorAccountIBAN);

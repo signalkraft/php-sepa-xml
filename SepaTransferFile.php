@@ -26,6 +26,7 @@
  * @author Ianaré Sévi
  * @author Vincent MOMIN
  */
+require 'lib/SimpleXMLExtended.php';
 require 'lib/SepaFileBlock.php';
 require 'lib/SepaPaymentInfo.php';
 require 'lib/SepaCreditTransfer.php';
@@ -69,7 +70,7 @@ class SepaTransferFile extends SepaFileBlock
 	 */
 	protected $numberOfTransactions = 0;
 	/**
-	 * @var SimpleXMLElement
+	 * @var SimpleXMLExtended
 	 */
 	protected $xml;
 	/**

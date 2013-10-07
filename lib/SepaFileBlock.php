@@ -26,7 +26,7 @@
 abstract class SepaFileBlock
 {
 
-	//abstract public function generateXml(SimpleXMLElement $xml);
+	//abstract public function generateXml(SimpleXMLExtended $xml);
 
 	/**
 	 * Format an integer as a monetary value.
