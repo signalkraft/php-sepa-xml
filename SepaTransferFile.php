@@ -82,7 +82,7 @@ class SepaTransferFile extends SepaFileBlock
 
 	public function __construct()
 	{
-		$this->xml = simplexml_load_string(self::INITIAL_STRING);
+		$this->xml = simplexml_load_string(self::INITIAL_STRING, "SimpleXMLExtended");
 		$this->xml->addChild('CstmrCdtTrfInitn');
 	}
 	
