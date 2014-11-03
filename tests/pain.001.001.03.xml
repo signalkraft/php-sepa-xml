@@ -1,186 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03">
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03">
 	<CstmrCdtTrfInitn>
 		<GrpHdr>
-			<MsgId>ABC/090928/CCT001</MsgId>
-			<CreDtTm>2009-09-28T14:07:00</CreDtTm>
-			<NbOfTxs>3</NbOfTxs>
-			<CtrlSum>11500000</CtrlSum>
+			<MsgId>message-id-001</MsgId>
+			<CreDtTm>2010-09-28T14:07:00</CreDtTm>
+			<NbOfTxs>1</NbOfTxs>
+			<CtrlSum>10.1</CtrlSum>
 			<InitgPty>
-				<Nm>ABC Corporation</Nm>
-				<PstlAdr>
-					<StrtNm>Times Square</StrtNm>
-					<BldgNb>7</BldgNb>
-					<PstCd>NY 10036</PstCd>
-					<TwnNm>New York</TwnNm>
-					<Ctry>US</Ctry>
-				</PstlAdr>
+				<Nm>Bedrijfsnaam</Nm>
+				<Id>
+					<OrgId>
+						<Othr>
+							<Id>123456789123456</Id>
+						</Othr>
+					</OrgId>
+				</Id>
 			</InitgPty>
 		</GrpHdr>
 		<PmtInf>
-			<PmtInfId>ABC/086</PmtInfId>
+			<PmtInfId>minimaal gevuld</PmtInfId>
 			<PmtMtd>TRF</PmtMtd>
-			<BtchBookg>false</BtchBookg>
-			<ReqdExctnDt>2009-09-29</ReqdExctnDt>
+			<NbOfTxs>1</NbOfTxs>
+			<CtrlSum>10.1</CtrlSum>
+			<ReqdExctnDt>2009-11-01</ReqdExctnDt>
 			<Dbtr>
-				<Nm>ABC Corporation</Nm>
-				<PstlAdr>
-					<StrtNm>Times Square</StrtNm>
-					<BldgNb>7</BldgNb>
-					<PstCd>NY 10036</PstCd>
-					<TwnNm>New York</TwnNm>
-					<Ctry>US</Ctry>
-				</PstlAdr>
+				<Nm>Naam</Nm>
 			</Dbtr>
 			<DbtrAcct>
 				<Id>
-					<Othr>
-						<Id>00125574999</Id>
-					</Othr>
+					<IBAN>NL44RABO0123456789</IBAN>
 				</Id>
 			</DbtrAcct>
 			<DbtrAgt>
 				<FinInstnId>
-					<BIC>BBBBUS33</BIC>
+					<BIC>RABONL2U</BIC>
 				</FinInstnId>
 			</DbtrAgt>
 			<CdtTrfTxInf>
 				<PmtId>
-					<InstrId>ABC/090928/CCT001/01</InstrId>
-					<EndToEndId>ABC/4562/2009-09-08</EndToEndId>
+					<EndToEndId>non ref</EndToEndId>
 				</PmtId>
 				<Amt>
-					<InstdAmt Ccy="JPY">10000000</InstdAmt>
+					<InstdAmt Ccy="EUR">10.1</InstdAmt>
 				</Amt>
-				<ChrgBr>SHAR</ChrgBr>
+				<ChrgBr>SLEV</ChrgBr>
 				<CdtrAgt>
 					<FinInstnId>
-						<BIC>AAAAGB2L</BIC>
+						<BIC>ABNANL2A</BIC>
 					</FinInstnId>
 				</CdtrAgt>
 				<Cdtr>
-					<Nm>DEF Electronics</Nm>
-					<PstlAdr>
-						<AdrLine>Corn Exchange 5th Floor</AdrLine>
-						<AdrLine>Mark Lane 55</AdrLine>
-						<AdrLine>EC3R7NE London</AdrLine>
-						<AdrLine>GB</AdrLine>
-					</PstlAdr>
+					<Nm>Naam creditor</Nm>
 				</Cdtr>
 				<CdtrAcct>
 					<Id>
-						<Othr>
-							<Id>23683707994125</Id>
-						</Othr>
+						<IBAN>NL90ABNA0111111111</IBAN>
 					</Id>
 				</CdtrAcct>
-				<Purp>
-					<Cd>CINV</Cd>
-				</Purp>
 				<RmtInf>
-					<Strd>
-						<RfrdDocInf>
-							<Nb>4562</Nb>
-							<RltdDt>2009-09-08</RltdDt>
-						</RfrdDocInf>
-					</Strd>
+					<Ustrd>vrije tekst</Ustrd>
 				</RmtInf>
 			</CdtTrfTxInf>
-			<CdtTrfTxInf>
-				<PmtId>
-					<InstrId>ABC/090628/CCT001/2</InstrId>
-					<EndToEndId>ABC/ABC-13679/2009-09-15</EndToEndId>
-				</PmtId>
-				<Amt>
-					<InstdAmt Ccy="EUR">500000</InstdAmt>
-				</Amt>
-				<ChrgBr>CRED</ChrgBr>
-				<CdtrAgt>
-					<FinInstnId>
-						<BIC>DDDDBEBB</BIC>
-					</FinInstnId>
-				</CdtrAgt>
-				<Cdtr>
-					<Nm>GHI Semiconductors</Nm>
-					<PstlAdr>
-						<StrtNm>Avenue Brugmann</StrtNm>
-						<BldgNb>415</BldgNb>
-						<PstCd>1180</PstCd>
-						<TwnNm>Brussels</TwnNm>
-					</PstlAdr>
-				</Cdtr>
-				<CdtrAcct>
-					<Id>
-						<IBAN>BE30001216371411</IBAN>
-					</Id>
-				</CdtrAcct>
-				<InstrForCdtrAgt>
-					<Cd>PHOB</Cd>
-					<InstrInf>+32/2/2222222</InstrInf>
-				</InstrForCdtrAgt>
-				<Purp>
-					<Cd>GDDS</Cd>
-				</Purp>
-				<RmtInf>
-					<Strd>
-						<RfrdDocInf>
-							<Tp>
-								<CdOrPrtry>
-									<Cd>CINV</Cd>
-								</CdOrPrtry>
-							</Tp>
-							<Nb>ABC-13679</Nb>
-							<RltdDt>2009-09-15</RltdDt>
-						</RfrdDocInf>
-					</Strd>
-				</RmtInf>
-			</CdtTrfTxInf>
-			<CdtTrfTxInf>
-				<PmtId>
-					<InstrId>ABC/090928/CCT001/3</InstrId>
-					<EndToEndId>ABC/987-AC/2009-09-27</EndToEndId>
-				</PmtId>
-				<Amt>
-					<InstdAmt Ccy="USD">1000000</InstdAmt>
-				</Amt>
-				<ChrgBr>SHAR</ChrgBr>
-				<CdtrAgt>
-					<FinInstnId>
-						<BIC>BBBBUS66</BIC>
-					</FinInstnId>
-				</CdtrAgt>
-				<Cdtr>
-					<Nm>ABC Corporation</Nm>
-					<PstlAdr>
-						<Dept>Treasury department</Dept>
-						<StrtNm>Bush Street</StrtNm>
-						<BldgNb>13</BldgNb>
-						<PstCd>CA 94108</PstCd>
-						<TwnNm>San Francisco</TwnNm>
-						<Ctry>US</Ctry>
-					</PstlAdr>
-				</Cdtr>
-				<CdtrAcct>
-					<Id>
+		</PmtInf>
+		<PmtInf>
+			<PmtInfId>maximaal gevuld</PmtInfId>
+			<PmtMtd>TRF</PmtMtd>
+			<BtchBookg>true</BtchBookg>
+			<NbOfTxs>1</NbOfTxs>
+			<CtrlSum>20.2</CtrlSum>
+			<PmtTpInf>
+				<InstrPrty>NORM</InstrPrty>
+				<SvcLvl>
+					<Cd>SEPA</Cd>
+				</SvcLvl>
+				<LclInstrm>
+					<Cd>IDEAL</Cd>
+				</LclInstrm>
+				<CtgyPurp>
+					<Cd>SECU</Cd>
+				</CtgyPurp>
+			</PmtTpInf>
+			<ReqdExctnDt>2009-11-01</ReqdExctnDt>
+			<Dbtr>
+				<Nm>Naam</Nm>
+				<PstlAdr>
+					<Ctry>NL</Ctry>
+					<AdrLine>Debtor straat 1</AdrLine>
+					<AdrLine>9999 XX Plaats debtor</AdrLine>
+				</PstlAdr>
+			</Dbtr>
+			<DbtrAcct>
+				<Id>
+					<IBAN>NL44RABO0123456789</IBAN>
+				</Id>
+			</DbtrAcct>
+			<DbtrAgt>
+				<FinInstnId>
+					<BIC>RABONL2U</BIC>
+				</FinInstnId>
+			</DbtrAgt>
+			<UltmtDbtr>
+				<Id>
+					<OrgId>
 						<Othr>
-							<Id>4895623</Id>
+							<Id>12345678</Id>
+							<SchmeNm>
+								<Prtry>klantnummer</Prtry>
+							</SchmeNm>
+							<Issr>klantnummer uitgifte instantie</Issr>
 						</Othr>
+					</OrgId>
+				</Id>
+			</UltmtDbtr>
+			<ChrgBr>SLEV</ChrgBr>
+			<CdtTrfTxInf>
+				<PmtId>
+					<InstrId>debtor-to-debtor-bank-01</InstrId>
+					<EndToEndId>End-to-end-id-debtor-to-creditor-01</EndToEndId>
+				</PmtId>
+				<Amt>
+					<InstdAmt Ccy="EUR">20.2</InstdAmt>
+				</Amt>
+				<CdtrAgt>
+					<FinInstnId>
+						<BIC>ABNANL2A</BIC>
+					</FinInstnId>
+				</CdtrAgt>
+				<Cdtr>
+					<Nm>Naam creditor</Nm>
+					<PstlAdr>
+						<Ctry>NL</Ctry>
+						<AdrLine>Straat creditor 1</AdrLine>
+						<AdrLine>9999 XX Plaats creditor</AdrLine>
+					</PstlAdr>
+				</Cdtr>
+				<CdtrAcct>
+					<Id>
+						<IBAN>NL90ABNA0111111111</IBAN>
 					</Id>
 				</CdtrAcct>
+				<UltmtCdtr>
+					<Id>
+						<PrvtId>
+							<DtAndPlcOfBirth>
+								<BirthDt>1969-07-03</BirthDt>
+								<CityOfBirth>PLAATS</CityOfBirth>
+								<CtryOfBirth>NL</CtryOfBirth>
+							</DtAndPlcOfBirth>
+						</PrvtId>
+					</Id>
+				</UltmtCdtr>
 				<Purp>
-					<Cd>INTC</Cd>
+					<Cd>CHAR</Cd>
 				</Purp>
 				<RmtInf>
 					<Strd>
-						<RfrdDocInf>
+						<CdtrRefInf>
 							<Tp>
 								<CdOrPrtry>
-									<Cd>CINV</Cd>
+									<Cd>SCOR</Cd>
 								</CdOrPrtry>
+								<Issr>CUR</Issr>
 							</Tp>
-							<Nb>987-AC</Nb>
-							<RltdDt>2009-09-27</RltdDt>
-						</RfrdDocInf>
+							<Ref>1234567</Ref>
+						</CdtrRefInf>
 					</Strd>
 				</RmtInf>
 			</CdtTrfTxInf>
