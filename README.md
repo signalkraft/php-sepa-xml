@@ -11,7 +11,7 @@ License: GNU Lesser General Public License v3.0
 
 
 The versions of the standard followed are:
-* _pain.001.002.03_ (or _pain.001.001.03_) for credits
+* _pain.001.003.03_ (or _pain.001.001.03_) for credits
 * and _pain.008.002.02_ (or _pain.008.001.02_) for debits
 
 Institutions and associations that should accept this format:
